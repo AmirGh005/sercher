@@ -1,0 +1,26 @@
+name: Run Python Script
+
+on:
+  schedule:
+    - cron: '0 12 * * *'  # هر روز ساعت 00:00 UTC اجرا می‌شود
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository content
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'  # نسخه پایتون مورد نظر خود را انتخاب کنید
+
+    - name: Install dependencies
+      run: |
+        pip install telethon  # اگر نیاز به نصب بسته‌ها دارید
+
+    - name: Run Python Script
+      run: |
+        python your_script.py  # جایگزین کنید با نام فایل پایتون خود
