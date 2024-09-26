@@ -1,9 +1,9 @@
-name: Run Python Script
+name: Run Python Script1
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '12 0 * * *'  # هر روز ساعت 00:00 UTC اجرا می‌شود
+    - cron: '00 00 * * *'  # هر روز ساعت 00:00 UTC اجرا می‌شود
 
 jobs:
   run-script:
