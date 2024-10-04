@@ -18,7 +18,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install telethon  # اگر نیاز به نصب بسته‌ها دارید
+        pip install pyrogram  # اگر نیاز به نصب بسته‌ها دارید
 
     - name: Run Python Script
       run: |
