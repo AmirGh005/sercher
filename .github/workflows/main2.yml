@@ -3,7 +3,7 @@ name: Run Python Script2
 on:
   workflow_dispatch:
   schedule:
-    - cron: '05 06 * * *'  # هر روز ساعت 00:00 UTC اجرا می‌شود
+    - cron: '10 10 * * *'  # هر روز ساعت 00:00 UTC اجرا می‌شود
 
 jobs:
   run-script:
@@ -18,9 +18,9 @@ jobs:
       with:
         python-version: '3.x'  # نسخه پایتون مورد نظر خود را انتخاب کنید
 
-    - name: Install pyrogram
+    - name: Install dependencies
       run: |
-        pip install telethon  # اگر نیاز به نصب بسته‌ها دارید
+        pip install pyrogram  # اگر نیاز به نصب بسته‌ها دارید
 
     - name: Run Python Script
       run: |
