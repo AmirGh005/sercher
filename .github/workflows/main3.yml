@@ -3,7 +3,7 @@ name: Run Python Script3
 on:
   workflow_dispatch:
   schedule:
-    - cron: '10 12 * * *'  # هر روز ساعت 00:00 UTC اجرا می‌شود
+    - cron: '15 16 * * *'  # هر روز ساعت 00:00 UTC اجرا می‌شود
 
 jobs:
   run-script:
