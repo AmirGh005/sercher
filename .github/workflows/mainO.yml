@@ -2,6 +2,8 @@ name: Run Python Script
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '05 04 * * *'  # هر روز ساعت 00:00 UTC اجرا می‌شود
 
 jobs:
   run-script:
